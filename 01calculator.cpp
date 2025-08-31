@@ -1,30 +1,38 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    double n1, n2;
-    char op; // operator
-    cout << "enter first  numbers = ";
-    cin >> n1;
-    cout << "enter operator you want ('+','-','*','/')= ";
+
+int main() {
+    double num1, num2;
+    char op;
+
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter operator (+, -, *, /): ";
     cin >> op;
-    cout << "enter 2nd numbers = ";
-    cin >> n2;
-    switch (op)
-    {
-    case '+':
-        cout << "the sum of two  = " << n1 + n2;
-        break;
-    case '-':
-        cout << "the sub  of two = " << n1 - n2;
-        break;
-    case '*':
-        cout << "the multiplicaton of two = " << n1 * n2;
-        break;
-    case '/':
-        cout << "the division  of two  = " << n1 / n2;
-        break;
-    default:
-        cout << "enter a valid operator";
+
+    cout << "Enter second number: ";
+    cin >> num2;
+
+    switch (op) {
+        case '+':
+            cout << "Result: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "Result: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "Result: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if (num2 != 0)
+                cout << "Result: " << num1 / num2 << endl;
+            else
+                cout << "Error: Division by zero!" << endl;
+            break;
+        default:
+            cout << "Invalid operator!" << endl;
     }
+
+    return 0;
 }
