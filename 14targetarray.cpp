@@ -12,10 +12,13 @@ int main(){
     int targetsum ;
     cout<<"Enter the target sum = ";    
     cin>>targetsum;
+
+    // start concept
+
     for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
+        for(int j=i+1;j<n;j++){ // i+1 not repeat
             if(arr[i]+arr[j]==targetsum){
-                cout<<"("<<arr[i]<<","<<arr[j]<<")"<<endl;
+                cout<<"["<<arr[i]<<","<<arr[j]<<"]"<<endl;
             }
         }
     }
